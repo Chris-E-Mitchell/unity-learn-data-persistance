@@ -45,7 +45,7 @@ public class MainManager : MonoBehaviour
         ScoreText.text = $"Score : {GameManager.Instance.PlayerName} : {m_Points}";
 
         highScoreData = GameManager.Instance.LoadHighScore();
-        HighScoreText.text = $"Score : {highScoreData.Name} : {highScoreData.Score}";
+        HighScoreText.text = $"High Score : {highScoreData.Name} : {highScoreData.Score}";
     }
 
     private void Update()
@@ -89,7 +89,7 @@ public class MainManager : MonoBehaviour
 
         if (m_Points > highScoreData.Score)
         {
-            HighScoreText.text = $"Score : {GameManager.Instance.PlayerName} : {m_Points}";
+            HighScoreText.text = $"High Score : {GameManager.Instance.PlayerName} : {m_Points}";
             GameManager.Instance.SaveHighScore(m_Points);
         }
     }
